@@ -6,7 +6,7 @@ function App() {
   const [prompt, setprompt] = useState("")
   const [response, setResponse] = useState(null)
   const handleClick = async()=>{
-    await axios.post("http://localhost:8080/chat",{prompt}).then(res=>{
+    await axios.post("https://jade-fierce-duck.cyclic.app/chat",{prompt}).then(res=>{
       setResponse(res.data)
     }).catch((err)=>console.log(err))
 
